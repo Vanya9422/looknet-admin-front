@@ -1,0 +1,171 @@
+.content,
+.p {
+	font-size: 17rem;
+
+	@include small-tablet {
+		font-size: 16rem;
+	}
+
+	@include large-mobile {
+		font-size: 14rem;
+	}
+}
+
+.content b,
+.b {
+	font-weight: 600;
+}
+
+.content strong,
+.strong {
+	font-weight: 600;
+}
+
+.content a:not([class]),
+.a {}
+
+.content {
+	p {
+		&:not(:first-child) {
+			margin-top: 15rem;
+		}
+	}
+
+	@include large-mobile {
+		p {
+			&:not(:first-child) {
+				margin-top: 10rem;
+			}
+		}
+	}
+}
+
+.h1,
+.content h1,
+.h2,
+.content h2,
+.h3,
+.content h3,
+.h4,
+.content h4,
+.h5,
+.content h5,
+.h6,
+.content h6 {
+	font-weight: 500;
+	font-family: 'Atyp Display';
+}
+
+.h1,
+.content h1 {
+	font-weight: 600;
+	font-size: 50rem;
+	line-height: 1;
+
+	@include small-tablet {
+		font-size: 40rem;
+	}
+
+	@include large-mobile {
+		font-size: 28rem;
+	}
+}
+
+.h2,
+.content h2 {
+	font-size: 30rem;
+	font-family: 'Gilroy';
+	font-weight: 600;
+	line-height: 1.1;
+
+	&_big {
+		font-size: 36rem;
+		line-height: 1;
+	}
+
+	@include large-tablet {
+		font-size: 26rem;
+	}
+
+	@include large-mobile {
+		font-size: 20rem;
+		line-height: 120%;
+	}
+}
+
+.h3,
+.content h3 {
+	font-family: 'Gilroy';
+	font-size: 26rem;
+	line-height: 1;
+
+	@include large-mobile {
+		font-size: 20rem;
+		font-weight: 600;
+		line-height: 1.1;
+	}
+}
+
+.h4,
+.content h4 {
+	font-size: 20rem;
+	line-height: 1.2;
+
+	@include large-mobile {
+		font-size: 14rem;
+	}
+}
+
+.h5,
+.content h5 {
+	font-family: 'Gilroy';
+	font-size: 17rem;
+	font-weight: 600;
+	line-height: 1;
+}
+
+.h6,
+.content h6 {
+	font-family: 'Gilroy';
+	font-size: 16rem;
+	font-weight: 500;
+	line-height: 1.2;
+
+	@include large-mobile {
+		font-size: 15rem;
+	}
+}
+
+.content {
+	&-text__field__inner {
+		max-width: 95%;
+		margin-left: auto;
+	}
+}
+
+.cool-lightbox {
+	&-toolbar__btn {
+		&:nth-last-child(2) {
+			display: none !important;
+		}
+
+		background: transparent !important;
+
+		.button-close {
+			background: #F4F3F4 !important;
+			fill: transparent;
+		}
+	}
+
+	.button-close {
+		background: #F4F3F4 !important;
+
+		svg {
+			fill: transparent;
+		}
+
+		&.modal-left {
+			transform: rotate(180deg);
+		}
+	}
+}

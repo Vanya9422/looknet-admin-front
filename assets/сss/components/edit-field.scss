@@ -1,0 +1,120 @@
+.user-info__name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 250px;
+}
+@include large-desktop{
+  .user-info_big .user-info__data {
+    margin-left: 20rem;
+    margin-top: 0;
+    max-width: calc(100% - 130px);
+  }
+}
+@include large-mobile{
+  .user-info_big .user-info__data {
+
+  max-width: calc(100% - 80px);
+}
+}
+
+.edit-field{
+	&__row {
+		display: flex;
+		align-items: center;
+		min-height: 60rem;
+
+		&:not(:first-child) {
+			margin-top: 15rem;
+		}
+
+		@include large-mobile {
+			min-height: inherit;
+		}
+	}
+	&__column {
+		&_left {
+			width: 35%;
+		}
+		&_center {
+			width: 45%;
+		}
+		&_right {
+			width: 20%;
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+			min-width: 130rem;
+		}
+
+		@include large-mobile {
+			&_center {
+				width: 55%;
+				-webkit-line-clamp: 1;
+				-webkit-box-orient: vertical;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+			&_right {
+				min-width: inherit;
+				width: 10%;
+			}
+		}
+	}
+
+	&__placeholder {
+		padding-left: 20rem;
+		font-family: 'Gilroy';
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+		@include large-mobile {
+			font-size: 16rem;
+			padding-left: 0;
+		}
+	}
+
+	&__nav {
+		display: flex;
+		&-item {
+			padding: 0 20rem;
+			&:not(:first-child) {
+				border-left: 1px solid $light-gray;
+			}
+		}
+
+		@include small-desktop {
+			&-item {
+				padding: 0 10rem;
+				&:last-child {
+					padding-right: 0;
+				}
+			}
+		}
+	}
+
+	&__link {
+		font-size: 17rem;
+		font-weight: 600;
+		cursor: pointer;
+		&.color-gray {
+			color: $dark-gray;
+		}
+
+		@include large-mobile {
+			font-size: 16rem;
+		}
+	}
+
+	@include large-mobile {
+		.mobile-hidden {
+			display: none;
+		}
+	}
+
+	@include min-large-mobile {
+		.mobile-visible {
+			display: none;
+		}
+	}
+}
